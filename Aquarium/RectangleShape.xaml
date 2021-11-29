@@ -10,5 +10,6 @@
 
     <Grid Background="#FF1B8ED3">
         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Prostokąt</TextBlock>
+        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Images/RectrangleShape.png" />
     </Grid>
 </Page>

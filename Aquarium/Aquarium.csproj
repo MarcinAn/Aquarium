@@ -158,5 +158,8 @@
   <ItemGroup>
     <Resource Include="Images\PanoramicButton.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RectrangleShape.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

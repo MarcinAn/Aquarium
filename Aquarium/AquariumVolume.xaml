@@ -60,7 +60,7 @@
             <Image Source="/Images/PanoramicButton.png" />
         </Button>
 
-        <Frame x:Name="AquariumVolumeShape" Grid.Row="3" Grid.RowSpan="4" Grid.Column="2"></Frame>
+        <Frame x:Name="AquariumVolumeShape" Grid.Row="3" Grid.RowSpan="4" Grid.Column="2" Width="600" Height="350" HorizontalAlignment="Left" VerticalAlignment="Top"></Frame>
         
     </Grid>
 </Page>
