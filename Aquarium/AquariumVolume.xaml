@@ -1,0 +1,66 @@
+﻿<Page x:Class="Aquarium.AquariumVolume"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Aquarium"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AquariumVolume">
+
+    <Page.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="3"/>
+            <Setter Property="FontSize" Value="16px"/>
+            <Setter Property="HorizontalAlignment" Value="Center" />
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="70"/>
+            <Setter Property="Width" Value="70"/>
+            <Setter Property="Background" Value="#FF0F527A"/>
+        </Style>
+        
+    </Page.Resources>
+
+    <Grid Background="#FF1B8ED3">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10px"></RowDefinition>
+            <RowDefinition Height="30px"></RowDefinition>
+            <RowDefinition Height="10px"></RowDefinition>
+            <RowDefinition Height="30px"></RowDefinition>
+            <RowDefinition Height="80px"></RowDefinition>
+            <RowDefinition Height="80px"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80px"></ColumnDefinition>
+            <ColumnDefinition Width="80px"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4">Kalkulator objętości akwarium</TextBlock>
+
+        <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="13">Wybierz kształt akwarium</Label>
+
+        <Button x:Name="RectangeButton" Grid.Row="4" Grid.Column="0" Click="RectangeButton_Click">
+            <Image Source="/Images/RectangleButton.png"/>
+        </Button>
+
+        <Button x:Name="TriangleButton" Grid.Row="4" Grid.Column="1" Click="TriangleButton_Click">
+            <Image Source="/Images/TriangleButton.png" />
+        </Button>
+
+        <Button x:Name="TrapezeButton" Grid.Row="5" Grid.Column="0" Click="TrapezeButton_Click">
+            <Image Source="/Images/TrapezeButton.png" />
+        </Button>
+
+        <Button x:Name="PanoramicButton" Grid.Row="5" Grid.Column="1" Click="PanoramicButton_Click">
+            <Image Source="/Images/PanoramicButton.png" />
+        </Button>
+
+        <Frame x:Name="AquariumVolumeShape" Grid.Row="3" Grid.RowSpan="4" Grid.Column="2"></Frame>
+        
+    </Grid>
+</Page>
