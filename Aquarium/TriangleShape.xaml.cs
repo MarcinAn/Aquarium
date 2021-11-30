@@ -24,5 +24,11 @@ namespace Aquarium
         {
             InitializeComponent();
         }
+
+        private void TriangleCalculate_Click(object sender, RoutedEventArgs e)
+        {
+            VolumeCalculate volumeCalculate = new VolumeCalculate();
+            TriangleVolume.Content = volumeCalculate.TriangleVolume(TriangleHeight.Text, TriangleWidth.Text, TriangleHeight.Text);
+        }
     }
 }

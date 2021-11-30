@@ -24,5 +24,11 @@ namespace Aquarium
         {
             InitializeComponent();
         }
+
+        private void TrapezeCalculate_Click(object sender, RoutedEventArgs e)
+        {
+            VolumeCalculate volumeCalculate = new VolumeCalculate();
+            TrapezeVolume.Content = volumeCalculate.TrapezeVolume(TrapezeHeight.Text, TrapezeWidthLong.Text, TrapezeWidthShort.Text, TrapezeDepth.Text);
+        }
     }
 }

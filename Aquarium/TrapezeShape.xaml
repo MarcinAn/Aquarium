@@ -8,7 +8,68 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="TrapezeShape">
 
+    <Page.Resources>
+        <Style x:Key="MyWaterMarkStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <Border Background="White" BorderBrush="#FF7D8683" BorderThickness="1"/>
+                            <ScrollViewer x:Name="PART_ContentHost" VerticalAlignment="Center" />
+                            <Label x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}" VerticalAlignment="Center"
+                               Visibility="Collapsed" Foreground="Gray" FontFamily="Arial" FontSize="8"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="Text" Value=""/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Visibility" TargetName="WaterMarkLabel" Value="Visible"/>
+                            </MultiTrigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Foreground" Value="DimGray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="30" />
+            <Setter Property="Background" Value="#FF0F527A" />
+            <Setter Property="Foreground" Value="#FF75D7D9" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Width" Value="90" />
+        </Style>
+
+        <Style x:Key="ResultLabel" TargetType="{x:Type Label}">
+            <Setter Property="Margin" Value="30" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Height" Value="30" />
+        </Style>
+
+    </Page.Resources>
+
     <Grid Background="#FF1B8ED3">
-        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Trapez</TextBlock>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Image Height="300" Width="550" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="7" Source="/Images/TrapezeShape.png" />
+        <TextBox x:Name="TrapezeHeight" Style="{StaticResource MyWaterMarkStyle}" Tag="Wysokość w mm."  Grid.Column="0" Grid.Row="0" Height="20" Width="80" Margin="0,90,50,0" VerticalAlignment="Center" HorizontalAlignment="Right" Opacity="0.7"></TextBox>
+        <TextBox x:Name="TrapezeDepth" Style="{StaticResource MyWaterMarkStyle}" Tag="Głębokość w mm." Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Height="20" Width="80" Margin="100,50,50,0" VerticalAlignment="Top" HorizontalAlignment="Center" Opacity="0.7"></TextBox>
+        <TextBox x:Name="TrapezeWidthLong" Style="{StaticResource MyWaterMarkStyle}" Tag="Szerokość w mm." Grid.Column="0" Grid.Row="0" Height="20" Width="80" Margin="0,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Right" Opacity="0.7"></TextBox>
+        <TextBox x:Name="TrapezeWidthShort" Style="{StaticResource MyWaterMarkStyle}" Tag="Szerokość w mm." Grid.Column="1" Grid.Row="1" Height="20" Width="80" Margin="0,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Opacity="0.7"></TextBox>
+
+        <Button x:Name="TrapezeCalculate" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="TrapezeCalculate_Click">Oblicz</Button>
+        <Label x:Name="TrapezeVolume" Style="{StaticResource ResultLabel}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom"></Label>
     </Grid>
 </Page>

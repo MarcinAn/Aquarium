@@ -24,5 +24,11 @@ namespace Aquarium
         {
             InitializeComponent();
         }
+
+        private void PanoramicCalculate_Click(object sender, RoutedEventArgs e)
+        {
+            VolumeCalculate volumeCalculate = new VolumeCalculate();
+            PanoramicVolume.Content = volumeCalculate.PanoramicVolume(PanoramicHeight.Text, PanoramicWidth.Text, PanoramicDepthLong.Text, PanoramicDepthShort.Text);
+        }
     }
 }

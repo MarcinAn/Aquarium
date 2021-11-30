@@ -67,6 +67,7 @@
     <Compile Include="TriangleShape.xaml.cs">
       <DependentUpon>TriangleShape.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VolumeCalculate.cs" />
     <Page Include="AquariumVolume.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -166,6 +167,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\TrangleShape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\TrapezeShape.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
