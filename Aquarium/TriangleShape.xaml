@@ -10,5 +10,7 @@
 
     <Grid Background="#FF1B8ED3">
         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Trójkąt</TextBlock>
+        <Image Source="/Images/TrangleShape.png" />
+
     </Grid>
 </Page>

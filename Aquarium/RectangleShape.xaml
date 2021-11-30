@@ -8,8 +8,55 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="RectangleShape">
 
+    <Page.Resources>
+        <Style x:Key="MyWaterMarkStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <Border Background="White" BorderBrush="#FF7D8683" BorderThickness="1"/>
+                            <ScrollViewer x:Name="PART_ContentHost" VerticalAlignment="Center" />
+                            <Label x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}" VerticalAlignment="Center"
+                               Visibility="Collapsed" Foreground="Gray" FontFamily="Arial"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="Text" Value=""/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Visibility" TargetName="WaterMarkLabel" Value="Visible"/>
+                            </MultiTrigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Foreground" Value="DimGray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
     <Grid Background="#FF1B8ED3">
-        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Prostokąt</TextBlock>
-        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Images/RectrangleShape.png" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Image Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="7" Source="/Images/RectrangleShape.png"/>
+        <TextBox Style="{StaticResource MyWaterMarkStyle}" Tag="Wysokość w mm." Margin="10" Grid.Column="1" Grid.Row="3" Width="110px" Height="25px" HorizontalAlignment="Left"></TextBox>
+        <TextBox Style="{StaticResource MyWaterMarkStyle}" Tag="Głębokość w mm." Grid.Column="0" Grid.Row="5" Width="110px" Height="25px" HorizontalAlignment="Right" VerticalAlignment="Bottom"></TextBox>
+        <TextBox Style="{StaticResource MyWaterMarkStyle}" Tag="Szerokość w mm." Grid.Column="2" Grid.Row="7" Width="110px" Height="25px" HorizontalAlignment="Center" VerticalAlignment="Top" ></TextBox>
     </Grid>
 </Page>
