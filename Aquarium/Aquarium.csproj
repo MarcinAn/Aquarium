@@ -78,6 +78,9 @@
     <Compile Include="BottomSurfaceVolume.xaml.cs">
       <DependentUpon>BottomSurfaceVolume.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Description.xaml.cs">
+      <DependentUpon>Description.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PanoramicShape.xaml.cs">
       <DependentUpon>PanoramicShape.xaml</DependentUpon>
     </Compile>
@@ -101,7 +104,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FishCatalog.xaml">
+    <Page Include="Description.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -115,9 +118,6 @@
     </Compile>
     <Compile Include="AquariumVolume.xaml.cs">
       <DependentUpon>AquariumVolume.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="FishCatalog.xaml.cs">
-      <DependentUpon>FishCatalog.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -172,9 +172,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Aquarium_Background.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\RectangleButton.png" />
   </ItemGroup>
   <ItemGroup>
@@ -209,6 +206,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

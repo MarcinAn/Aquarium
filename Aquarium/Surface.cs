@@ -35,6 +35,11 @@ namespace Aquarium
             expectationBottomUnitValue = expectationBottomUnit;
             resultUnitValue = resultUnit;
 
+            if (surfaceValue == 0 || expectationBottomValue == 0)
+            {
+                return "Błędne dane";
+            }
+
             if (surfaceUnitValue == "mm\u00b2")
             {
                 surfaceValue = surfaceValue * 1;

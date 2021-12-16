@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Aquarium
 {
     /// <summary>
-    /// Interaction logic for FishCatalog.xaml
+    /// Interaction logic for Description.xaml
     /// </summary>
-    public partial class FishCatalog : Page
+    public partial class Description : Page
     {
-        public FishCatalog()
+        public Description()
         {
             InitializeComponent();
         }

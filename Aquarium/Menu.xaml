@@ -10,12 +10,16 @@
 
     <Grid Background="#FF1B8ED3">
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="100px"></RowDefinition>
+            <RowDefinition Height="50px"></RowDefinition>
+            <RowDefinition Height="40px"></RowDefinition>
+            <RowDefinition Height="40px"></RowDefinition>
+            <RowDefinition Height="40px"></RowDefinition>
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" HorizontalAlignment="Center">Projekt zaliczeniowy na przedmiot:</Label>
-        <Label Grid.Row="1" HorizontalAlignment="Center">Projektowanie interfejsu użytkownika</Label>
-        <Label Grid.Row="2" HorizontalAlignment="Center">Autor: Marcin Antonik</Label>
+        <Label Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="24" FontWeight="Bold" Foreground="#FF0F527A">Projekt zaliczeniowy na przedmiot:</Label>
+        <Label Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="#FF0F527A">Projektowanie interfejsu użytkownika</Label>
+        <Label Grid.Row="2" HorizontalAlignment="Center" FontSize="20" Foreground="#FF0F527A">Autor: Marcin Antonik</Label>
+        <Label Grid.Row="3" HorizontalAlignment="Center" FontSize="20" Foreground="#FF0F527A">Numer albumu: 113105</Label>
+        <Label Grid.Row="4" HorizontalAlignment="Center" FontSize="20" Foreground="#FF0F527A">Grupa: 32_Inf_P_NW_5</Label>
     </Grid>
 </Page>

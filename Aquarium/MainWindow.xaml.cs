@@ -26,15 +26,9 @@ namespace Aquarium
             Menu.Content = new Menu();
         }
 
-
         private void MenuButton_Click(object sender, RoutedEventArgs e)
         {
             Menu.Content = new Menu();
-        }
-
-        private void FishCatalogButton_Click(object sender, RoutedEventArgs e)
-        {
-            Menu.Content = new FishCatalog();
         }
 
         private void AquariumVolumeButton_Click(object sender, RoutedEventArgs e)
@@ -45,6 +39,11 @@ namespace Aquarium
         private void BottomSurfaceButton_Click(object sender, RoutedEventArgs e)
         {
             Menu.Content = new BottomSurfaceVolume();
+        }
+
+        private void DescriptionButton_Click(object sender, RoutedEventArgs e)
+        {
+            Menu.Content = new Description();
         }
     }
 }

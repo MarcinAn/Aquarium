@@ -70,6 +70,6 @@
         <TextBox x:Name="TrapezeWidthShort" Style="{StaticResource MyWaterMarkStyle}" Tag="Szerokość w mm." Grid.Column="1" Grid.Row="1" Height="20" Width="80" Margin="0,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Opacity="0.7"></TextBox>
 
         <Button x:Name="TrapezeCalculate" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="TrapezeCalculate_Click">Oblicz</Button>
-        <Label x:Name="TrapezeVolume" Style="{StaticResource ResultLabel}" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,20,0,0"></Label>
+        <Label x:Name="TrapezeVolume" Style="{StaticResource ResultLabel}" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,20,0,0" FontSize="14" FontWeight="Bold" Foreground="#FF0F527A"></Label>
     </Grid>
 </Page>

@@ -35,14 +35,14 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="80px"></ColumnDefinition>
-            <ColumnDefinition Width="80px"></ColumnDefinition>
+            <ColumnDefinition Width="90px"></ColumnDefinition>
+            <ColumnDefinition Width="90px"></ColumnDefinition>
             <ColumnDefinition Width="1*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4">Kalkulator objętości akwarium</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" FontWeight="Bold" Foreground="#FF0F527A">Kalkulator objętości akwarium</TextBlock>
 
-        <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="13">Wybierz kształt akwarium</Label>
+        <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Foreground="#FF0F527A">Wybierz kształt akwarium</Label>
 
         <Button x:Name="RectangeButton" Grid.Row="4" Grid.Column="0" Click="RectangeButton_Click">
             <Image Source="/Images/RectangleButton.png"/>
