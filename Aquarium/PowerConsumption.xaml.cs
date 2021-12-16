@@ -20,10 +20,11 @@ namespace Aquarium
     /// </summary>
     public partial class PowerConsumption : Page
     {
+        PowerConsumptionCalc powerConsumptionCalc = new PowerConsumptionCalc();
         public PowerConsumption()
         {
             InitializeComponent();
-            PowerConsumptionCalc powerConsumptionCalc = new PowerConsumptionCalc();
+
             TypeValue.Items.Add(powerConsumptionCalc.types[0]);
             TypeValue.Items.Add(powerConsumptionCalc.types[1]);
 
@@ -81,7 +82,10 @@ namespace Aquarium
 
         private void ResulPowerButton_Click(object sender, RoutedEventArgs e)
         {
-
+            powerConsumptionCalc.PowerConsumptionCalculate(PriceOfElectricityValue.Text, HeaterValue.Text, HeaterTimeValue.Text, FilterValue.Text, FilterTimeValue.Text, TypeValue.Text);
+            ResultDay.Content = powerConsumptionCalc.resultDay;
+            ResultMonth.Content = powerConsumptionCalc.resultMonth;
+            ResultYear.Content = powerConsumptionCalc.resultYear;
         }
     }
 }

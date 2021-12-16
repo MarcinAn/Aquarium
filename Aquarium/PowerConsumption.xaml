@@ -35,7 +35,9 @@
             <RowDefinition Height="50px"></RowDefinition>
             <RowDefinition Height="50px"></RowDefinition>
             <RowDefinition Height="50px"></RowDefinition>
-            <RowDefinition Height="50px"></RowDefinition>
+            <RowDefinition Height="30px"></RowDefinition>
+            <RowDefinition Height="30px"></RowDefinition>
+            <RowDefinition Height="30px"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
 
@@ -59,8 +61,10 @@
         <ComboBox x:Name="HeaterTimeValue" Grid.Row="5" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="40" Margin="140,0,0,0" VerticalContentAlignment="Center"/>
         <Label Grid.Row="6" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A">Przy pracy h/dzień:</Label>
         <ComboBox x:Name="FilterTimeValue" Grid.Row="6" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="40" Margin="140,0,0,0" VerticalContentAlignment="Center"/>
-        
-        <Button x:Name="ResulPowerButton" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ResulPowerButton_Click">Oblicz</Button>
-        <Label x:Name="Result" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A"></Label>
+
+        <Button x:Name="ResulPowerButton" Grid.Row="7" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="ResulPowerButton_Click" Grid.ColumnSpan="3" Margin="335,0,335,9.8">Oblicz</Button>
+        <Label x:Name="ResultDay" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A"></Label>
+        <Label x:Name="ResultMonth" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A"></Label>
+        <Label x:Name="ResultYear" Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A"></Label>
     </Grid>
 </Page>

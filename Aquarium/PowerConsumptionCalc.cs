@@ -14,6 +14,17 @@ namespace Aquarium
         public string typeValue;
         public float heaterTimeValue;
         public float filterTimeValue;
+        public float heaterResult;
+        public float filterResult;
+        public float consumptioPerDay;
+        public float consumptioPerMonth;
+        public float consumptioPerYear;
+        public string resultDay;
+        public string resultMonth;
+        public string resultYear;
+        public float consumptioPerDaykWh;
+        public float consumptioPerMonthkWh;
+        public float consumptioPerYearkWh; 
         public List<string> types = new List<string>()
     {
         "zł",
@@ -54,7 +65,27 @@ namespace Aquarium
             heaterTimeValue = valueParser.ValueParse(heaterTime);
             filterTimeValue = valueParser.ValueParse(filterTime);
 
+            if (typeValue == "zł")
+            {
+                priceOfElectricityValue = priceOfElectricityValue * 100;
+            }
 
+
+            heaterResult = (float)Math.Round(((heaterValue * 0.001f) * heaterTimeValue),2);
+            filterResult = (float)Math.Round(((filterValue * 0.001f) * filterTimeValue), 2);
+
+            consumptioPerDay = ((heaterResult + filterResult) * priceOfElectricityValue)/100;
+            consumptioPerDay = (float)Math.Round(consumptioPerDay, 2);
+            consumptioPerMonth = consumptioPerDay*30;
+            consumptioPerYear= consumptioPerMonth*12;
+
+            consumptioPerDaykWh = heaterResult + filterResult;
+            consumptioPerMonthkWh = consumptioPerDaykWh * 30;
+            consumptioPerYearkWh = consumptioPerMonthkWh * 12;
+
+            resultDay = "Zużycie za dzień to " + consumptioPerDaykWh + "kWh, co daje " + consumptioPerDay + " zł";
+            resultMonth = "Zużycie za miesiąc to " + consumptioPerMonthkWh + "kWh, co daje " + consumptioPerMonth + " zł"; ;
+            resultYear = "Zużycie za rok to " + consumptioPerYearkWh + "kWh, co daje " + consumptioPerYear + " zł";
         }
     }
 }
