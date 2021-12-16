@@ -8,7 +8,9 @@ namespace Aquarium
 {
     class VolumeCalculate
     {
-        public float result;
+        public float capacity;
+        public float bottomSurface;
+
         public string RactagleVolume(string ractagleHeight, string ractagleWidth, string ractagleDepth)
         {
             float height = ValueParse(ractagleHeight);
@@ -21,8 +23,9 @@ namespace Aquarium
             }
             else
             {
-                result = (((width * depth) * height) * 0.001f) / 1000f;
-                return "Objętość akwarium wynosi: " + Math.Round(result,2) + " l.";
+                bottomSurface = width * depth;
+                capacity = ((bottomSurface * height) * 0.001f) / 1000f;
+                return "Objętość akwarium wynosi: " + Math.Round(capacity, 1) + " l. Powierzchnia dna to " + surfaceUnits(bottomSurface);
             }
         }
 
@@ -38,8 +41,9 @@ namespace Aquarium
             }
             else
             {
-                result = ((((width * depth)/2) * height) * 0.001f) / 1000f;
-                return "Objętość akwarium wynosi: " + Math.Round(result, 2) + " l.";
+                bottomSurface= (width * depth) / 2;
+                capacity = ((bottomSurface * height) * 0.001f) / 1000f;
+                return "Objętość akwarium wynosi: " + Math.Round(capacity, 1) + " l. Powierzchnia dna to " + surfaceUnits(bottomSurface);
             }
         }
 
@@ -56,8 +60,9 @@ namespace Aquarium
             }
             else
             {
-                result = (((((widthLong+widthShort)*depth)/2)*height)*0.001f)/1000f;
-                return "Objętość akwarium wynosi: " + Math.Round(result, 2) + " l.";
+                bottomSurface = ((widthLong + widthShort) * depth) / 2;
+                capacity = ((bottomSurface * height)*0.001f)/1000f;
+                return "Objętość akwarium wynosi: " + Math.Round(capacity, 1) + " l. Powierzchnia dna to " + surfaceUnits(bottomSurface);
             }
         }
 
@@ -76,8 +81,9 @@ namespace Aquarium
             {
                 float squareArea = width * depthShort;
                 float ellipticalArea = (float)Math.PI * (width / 2f) * (depthLong - depthShort) / 2f;
-                result = (squareArea+ ellipticalArea) * height * 0.001f / 1000f;
-                return "Objętość akwarium wynosi: " + Math.Round(result, 2) + " l.";
+                bottomSurface = squareArea + ellipticalArea;
+                capacity = bottomSurface * height * 0.001f / 1000f;
+                return "Objętość akwarium wynosi: " + Math.Round(capacity, 1) + " l. Powierzchnia dna to " + surfaceUnits(bottomSurface);
             }
         }
 
@@ -90,6 +96,29 @@ namespace Aquarium
                 return resultNumber;
             else
                 return 0;
+        }
+
+        public string surfaceUnits(float bottomSurface)
+        {
+            if (bottomSurface < 100)
+            {
+                bottomSurface = (float)Math.Round(bottomSurface, 1);
+                return bottomSurface + "mm\u00b2";
+            }
+            else if (bottomSurface >= 100 && bottomSurface < 1000000)
+            {
+                bottomSurface = (float)Math.Round(bottomSurface / 100, 1);
+                return bottomSurface + "cm\u00b2";
+            }
+            else if (bottomSurface >= 1000000)
+            {
+                bottomSurface = (float)Math.Round(bottomSurface / 1000000, 1);
+                return bottomSurface + "m\u00b2";
+            }
+            else
+            {
+                return "0";
+            }
         }
     }
 }

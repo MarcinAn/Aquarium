@@ -8,7 +8,13 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="FishCatalog">
 
+    <Page.Resources>
+        <Style TargetType="DataGrid">
+            <Setter Property="Margin" Value="20" />
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+    </Page.Resources>
+
     <Grid Background="#FF1B8ED3">
-        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Fish Catalog</TextBlock>
     </Grid>
 </Page>

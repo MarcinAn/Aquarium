@@ -26,6 +26,7 @@ namespace Aquarium
             Menu.Content = new Menu();
         }
 
+
         private void MenuButton_Click(object sender, RoutedEventArgs e)
         {
             Menu.Content = new Menu();
