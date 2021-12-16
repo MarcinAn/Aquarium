@@ -9,6 +9,13 @@
       Title="Menu">
 
     <Grid Background="#FF1B8ED3">
-        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Menu</TextBlock>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" HorizontalAlignment="Center">Projekt zaliczeniowy na przedmiot:</Label>
+        <Label Grid.Row="1" HorizontalAlignment="Center">Projektowanie interfejsu użytkownika</Label>
+        <Label Grid.Row="2" HorizontalAlignment="Center">Autor: Marcin Antonik</Label>
     </Grid>
 </Page>

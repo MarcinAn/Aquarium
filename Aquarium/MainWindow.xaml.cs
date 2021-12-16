@@ -41,5 +41,10 @@ namespace Aquarium
         {
             Menu.Content = new AquariumVolume();
         }
+
+        private void BottomSurfaceButton_Click(object sender, RoutedEventArgs e)
+        {
+            Menu.Content = new BottomSurfaceVolume();
+        }
     }
 }

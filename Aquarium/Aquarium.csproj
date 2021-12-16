@@ -75,12 +75,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BottomSurfaceVolume.xaml.cs">
+      <DependentUpon>BottomSurfaceVolume.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PanoramicShape.xaml.cs">
       <DependentUpon>PanoramicShape.xaml</DependentUpon>
     </Compile>
     <Compile Include="RectangleShape.xaml.cs">
       <DependentUpon>RectangleShape.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Surface.cs" />
     <Compile Include="TrapezeShape.xaml.cs">
       <DependentUpon>TrapezeShape.xaml</DependentUpon>
     </Compile>
@@ -89,6 +93,10 @@
     </Compile>
     <Compile Include="VolumeCalculate.cs" />
     <Page Include="AquariumVolume.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BottomSurfaceVolume.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
