@@ -41,9 +41,9 @@ namespace Aquarium
             Menu.Content = new BottomSurfaceVolume();
         }
 
-        private void DescriptionButton_Click(object sender, RoutedEventArgs e)
+        private void PowerConsumptionButton_Click(object sender, RoutedEventArgs e)
         {
-            Menu.Content = new Description();
+            Menu.Content = new PowerConsumption();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Aquarium
 {
-    class Surface
+    class SurfaceCalculate
     {
         public float surfaceValue;
         public string surfaceUnitValue;
@@ -25,7 +25,7 @@ namespace Aquarium
             "l"
             };
 
-        public string SurfaceCalculate(string surface, string surfaceUnit, string expectationBottom, string expectationBottomUnit, string resultUnit)
+        public string Surface(string surface, string surfaceUnit, string expectationBottom, string expectationBottomUnit, string resultUnit)
         {
             ValueParser valueParser = new ValueParser();
 

@@ -78,16 +78,17 @@
     <Compile Include="BottomSurfaceVolume.xaml.cs">
       <DependentUpon>BottomSurfaceVolume.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Description.xaml.cs">
-      <DependentUpon>Description.xaml</DependentUpon>
-    </Compile>
     <Compile Include="PanoramicShape.xaml.cs">
       <DependentUpon>PanoramicShape.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PowerConsumption.xaml.cs">
+      <DependentUpon>PowerConsumption.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PowerConsumptionCalc.cs" />
     <Compile Include="RectangleShape.xaml.cs">
       <DependentUpon>RectangleShape.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Surface.cs" />
+    <Compile Include="SurfaceCalculate.cs" />
     <Compile Include="TrapezeShape.xaml.cs">
       <DependentUpon>TrapezeShape.xaml</DependentUpon>
     </Compile>
@@ -101,10 +102,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BottomSurfaceVolume.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Description.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -128,6 +125,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PanoramicShape.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PowerConsumption.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -23,7 +23,7 @@ namespace Aquarium
         public BottomSurfaceVolume()
         {
             InitializeComponent();
-            Surface surface = new Surface();
+            SurfaceCalculate surface = new SurfaceCalculate();
             SurfaceUnitValue.Items.Add(surface.units[0] + "\u00b2");
             SurfaceUnitValue.Items.Add(surface.units[1] + "\u00b2");
             SurfaceUnitValue.Items.Add(surface.units[2] + "\u00b2");
@@ -39,8 +39,8 @@ namespace Aquarium
 
         private void ResulSurfacetButton_Click(object sender, RoutedEventArgs e)
         {
-            Surface surface = new Surface();
-            Result.Content=surface.SurfaceCalculate(SurfaceValue.Text, SurfaceUnitValue.Text, ExpectationBottomValue.Text, ExpectationBottomUnitValue.Text, ResultUnitValue.Text);
+            SurfaceCalculate surface = new SurfaceCalculate();
+            Result.Content=surface.Surface(SurfaceValue.Text, SurfaceUnitValue.Text, ExpectationBottomValue.Text, ExpectationBottomUnitValue.Text, ResultUnitValue.Text);
         }
     }
 }
