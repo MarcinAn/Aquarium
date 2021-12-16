@@ -91,6 +91,7 @@
     <Compile Include="TriangleShape.xaml.cs">
       <DependentUpon>TriangleShape.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ValueParser.cs" />
     <Compile Include="VolumeCalculate.cs" />
     <Page Include="AquariumVolume.xaml">
       <SubType>Designer</SubType>

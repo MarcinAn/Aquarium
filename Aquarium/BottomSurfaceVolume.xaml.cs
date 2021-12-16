@@ -24,15 +24,23 @@ namespace Aquarium
         {
             InitializeComponent();
             Surface surface = new Surface();
-            CapacityUnits.Items.Add(surface.units[0] + "\u00b2");
-            CapacityUnits.Items.Add(surface.units[1] + "\u00b2");
-            CapacityUnits.Items.Add(surface.units[2] + "\u00b2");
-            SurfaceUnits.Items.Add(surface.units[0]);
-            SurfaceUnits.Items.Add(surface.units[1]);
-            SurfaceUnits.Items.Add(surface.units[2]);
-            ResulSurfacetUnits.Items.Add(surface.units[0] + "\u00b2");
-            ResulSurfacetUnits.Items.Add(surface.units[1] + "\u00b2");
-            ResulSurfacetUnits.Items.Add(surface.units[2] + "\u00b2");
+            SurfaceUnitValue.Items.Add(surface.units[0] + "\u00b2");
+            SurfaceUnitValue.Items.Add(surface.units[1] + "\u00b2");
+            SurfaceUnitValue.Items.Add(surface.units[2] + "\u00b2");
+            ExpectationBottomUnitValue.Items.Add(surface.units[0]);
+            ExpectationBottomUnitValue.Items.Add(surface.units[1]);
+            ExpectationBottomUnitValue.Items.Add(surface.units[2]);
+            ResultUnitValue.Items.Add(surface.units[0] + "\u00b3");
+            ResultUnitValue.Items.Add(surface.units[1] + "\u00b3");
+            ResultUnitValue.Items.Add(surface.units[2] + "\u00b3");
+            ResultUnitValue.Items.Add(surface.units[3]);
+            ResultUnitValue.Items.Add(surface.units[4]);
+        }
+
+        private void ResulSurfacetButton_Click(object sender, RoutedEventArgs e)
+        {
+            Surface surface = new Surface();
+            Result.Content=surface.SurfaceCalculate(SurfaceValue.Text, SurfaceUnitValue.Text, ExpectationBottomValue.Text, ExpectationBottomUnitValue.Text, ResultUnitValue.Text);
         }
     }
 }

@@ -10,12 +10,12 @@ namespace Aquarium
     {
         public float capacity;
         public float bottomSurface;
-
+        ValueParser valueParser = new ValueParser();
         public string RactagleVolume(string ractagleHeight, string ractagleWidth, string ractagleDepth)
         {
-            float height = ValueParse(ractagleHeight);
-            float width = ValueParse(ractagleWidth);
-            float depth = ValueParse(ractagleDepth);
+            float height = valueParser.ValueParse(ractagleHeight);
+            float width = valueParser.ValueParse(ractagleWidth);
+            float depth = valueParser.ValueParse(ractagleDepth);
 
             if (height <= 0 || width <= 0 || depth <= 0)
             {
@@ -31,9 +31,9 @@ namespace Aquarium
 
         public string TriangleVolume(string trangleHeight, string trangleWidth, string trangleDepth)
         {
-            float height = ValueParse(trangleHeight);
-            float width = ValueParse(trangleWidth);
-            float depth = ValueParse(trangleDepth);
+            float height = valueParser.ValueParse(trangleHeight);
+            float width = valueParser.ValueParse(trangleWidth);
+            float depth = valueParser.ValueParse(trangleDepth);
 
             if (height <= 0 || width <= 0 || depth <= 0)
             {
@@ -49,10 +49,10 @@ namespace Aquarium
 
         public string TrapezeVolume(string trapezeHeight, string trapezeWidthLong, string trapezeWidthShort, string trapezeDepth)
         {
-            float height = ValueParse(trapezeHeight);
-            float widthLong = ValueParse(trapezeWidthLong);
-            float widthShort = ValueParse(trapezeWidthShort);
-            float depth = ValueParse(trapezeDepth);
+            float height = valueParser.ValueParse(trapezeHeight);
+            float widthLong = valueParser.ValueParse(trapezeWidthLong);
+            float widthShort = valueParser.ValueParse(trapezeWidthShort);
+            float depth = valueParser.ValueParse(trapezeDepth);
 
             if (height <= 0 || widthLong <= 0 || widthShort <= 0 || depth <= 0)
             {
@@ -68,10 +68,10 @@ namespace Aquarium
 
         public string PanoramicVolume(string panoramicHeight, string panoramicWidth, string panoramicDepthLong, string panoramicDepthShort)
         {
-            float height = ValueParse(panoramicHeight);
-            float width = ValueParse(panoramicWidth);
-            float depthLong = ValueParse(panoramicDepthLong);
-            float depthShort = ValueParse(panoramicDepthShort);
+            float height = valueParser.ValueParse(panoramicHeight);
+            float width = valueParser.ValueParse(panoramicWidth);
+            float depthLong = valueParser.ValueParse(panoramicDepthLong);
+            float depthShort = valueParser.ValueParse(panoramicDepthShort);
 
             if (height <= 0 || width <= 0 || depthLong <= 0 || depthShort <= 0)
             {
@@ -85,17 +85,6 @@ namespace Aquarium
                 capacity = bottomSurface * height * 0.001f / 1000f;
                 return "Objętość akwarium wynosi: " + Math.Round(capacity, 1) + " l. Powierzchnia dna to " + surfaceUnits(bottomSurface);
             }
-        }
-
-        public float ValueParse(string stringToParse)
-        {
-            float resultNumber;
-
-            stringToParse=stringToParse.Replace('.',',');
-            if (float.TryParse(stringToParse, out resultNumber))
-                return resultNumber;
-            else
-                return 0;
         }
 
         public string surfaceUnits(float bottomSurface)

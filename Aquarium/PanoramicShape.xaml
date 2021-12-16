@@ -70,6 +70,6 @@
         <TextBox x:Name="PanoramicDepthLong" Style="{StaticResource MyWaterMarkStyle}" Tag="Głębokość w mm." Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Height="20" Width="80" Margin="280,55,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Opacity="0.7"></TextBox>
 
         <Button x:Name="PanoramicCalculate" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="PanoramicCalculate_Click">Oblicz</Button>
-        <Label x:Name="PanoramicVolume" Style="{StaticResource ResultLabel}" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+        <Label x:Name="PanoramicVolume" Style="{StaticResource ResultLabel}" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,20,0,0"></Label>
     </Grid>
 </Page>

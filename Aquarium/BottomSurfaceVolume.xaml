@@ -16,9 +16,11 @@
         </Style>
 
         <Style TargetType="Button">
-            <Setter Property="Height" Value="70"/>
-            <Setter Property="Width" Value="70"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="130"/>
             <Setter Property="Background" Value="#FF0F527A"/>
+            <Setter Property="Foreground" Value="#FF75D7D9" />
+            <Setter Property="FontSize" Value="14" />
         </Style>
 
     </Page.Resources>
@@ -32,25 +34,29 @@
             <RowDefinition Height="80px"></RowDefinition>
             <RowDefinition Height="80px"></RowDefinition>
             <RowDefinition Height="80px"></RowDefinition>
+            <RowDefinition Height="80px"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            <ColumnDefinition Width="120px"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4">Kalkulator objętości podłoża</TextBlock>
-        <Label Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Podaj objętość dna</Label>
-        <Label Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Podaj grubość warstwy podłoża jaką chcesz uzyskać:</Label>
-        <Label Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Wynik chcesz otrzymać w:</Label>
+        <Label Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center">Objętość dna: </Label>
+        <Label Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center">Grubość warstwy podłoża:</Label>
+        <Label Grid.Row="6" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center">Wynik chcesz otrzymać w:</Label>
 
-        <TextBox x:Name="CapacityValue" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100"></TextBox>
-        <TextBox x:Name="SurfaceValue" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100"></TextBox>
+        <TextBox x:Name="SurfaceValue" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"></TextBox>
+        <TextBox x:Name="ExpectationBottomValue" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"></TextBox>
 
-        <ComboBox x:Name="CapacityUnits" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100"/>
-        <ComboBox x:Name="SurfaceUnits" Grid.Row="5" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100"/>
-        <ComboBox x:Name="ResulSurfacetUnits" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100"/>
+        <ComboBox x:Name="SurfaceUnitValue" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"/>
+        <ComboBox x:Name="ExpectationBottomUnitValue" Grid.Row="5" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"/>
+        <ComboBox x:Name="ResultUnitValue" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"/>
+
+        <Button x:Name="ResulSurfacetButton" Grid.Row="7" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ResulSurfacetButton_Click">Oblicz</Button>
+        <Label x:Name="Result" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
     </Grid>
 </Page>
