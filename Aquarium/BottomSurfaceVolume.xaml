@@ -29,8 +29,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="10px"></RowDefinition>
             <RowDefinition Height="30px"></RowDefinition>
-            <RowDefinition Height="10px"></RowDefinition>
-            <RowDefinition Height="30px"></RowDefinition>
+            <RowDefinition Height="20px"></RowDefinition>
             <RowDefinition Height="50px"></RowDefinition>
             <RowDefinition Height="50px"></RowDefinition>
             <RowDefinition Height="50px"></RowDefinition>
@@ -46,18 +45,18 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" FontWeight="Bold" Foreground="#FF0F527A">Kalkulator objętości podłoża</TextBlock>
-        <Label Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A">Objętość dna: </Label>
-        <Label Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A">Grubość warstwy podłoża:</Label>
-        <Label Grid.Row="6" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A">Wynik w jednostkach:</Label>
+        <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A">Powierzchnia dna: </Label>
+        <Label Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A">Grubość warstwy podłoża:</Label>
+        <Label Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A">Wynik w jednostkach:</Label>
 
-        <TextBox x:Name="SurfaceValue" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"></TextBox>
-        <TextBox x:Name="ExpectationBottomValue" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"></TextBox>
+        <TextBox x:Name="SurfaceValue" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"></TextBox>
+        <TextBox x:Name="ExpectationBottomValue" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"></TextBox>
 
-        <ComboBox x:Name="SurfaceUnitValue" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"/>
-        <ComboBox x:Name="ExpectationBottomUnitValue" Grid.Row="5" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"/>
-        <ComboBox x:Name="ResultUnitValue" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"/>
+        <ComboBox x:Name="SurfaceUnitValue" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"/>
+        <ComboBox x:Name="ExpectationBottomUnitValue" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"/>
+        <ComboBox x:Name="ResultUnitValue" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"/>
 
-        <Button x:Name="ResulSurfacetButton" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ResulSurfacetButton_Click">Oblicz</Button>
-        <Label x:Name="Result" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A"></Label>
+        <Button x:Name="ResulSurfacetButton" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ResulSurfacetButton_Click">Oblicz</Button>
+        <Label x:Name="Result" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A"></Label>
     </Grid>
 </Page>

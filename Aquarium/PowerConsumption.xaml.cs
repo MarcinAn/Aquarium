@@ -78,11 +78,36 @@ namespace Aquarium
             FilterTimeValue.Items.Add(powerConsumptionCalc.types[24]);
             FilterTimeValue.Items.Add(powerConsumptionCalc.types[25]);
 
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[2]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[3]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[4]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[5]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[6]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[7]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[8]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[9]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[10]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[11]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[12]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[13]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[14]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[15]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[16]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[17]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[18]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[19]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[20]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[21]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[22]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[23]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[24]);
+            LightTimeValue.Items.Add(powerConsumptionCalc.types[25]);
+
         }
 
         private void ResulPowerButton_Click(object sender, RoutedEventArgs e)
         {
-            powerConsumptionCalc.PowerConsumptionCalculate(PriceOfElectricityValue.Text, HeaterValue.Text, HeaterTimeValue.Text, FilterValue.Text, FilterTimeValue.Text, TypeValue.Text);
+            powerConsumptionCalc.PowerConsumptionCalculate(PriceOfElectricityValue.Text, HeaterValue.Text, HeaterTimeValue.Text, FilterValue.Text, FilterTimeValue.Text, LightValue.Text, LightTimeValue.Text, TypeValue.Text);
             ResultDay.Content = powerConsumptionCalc.resultDay;
             ResultMonth.Content = powerConsumptionCalc.resultMonth;
             ResultYear.Content = powerConsumptionCalc.resultYear;

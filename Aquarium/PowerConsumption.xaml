@@ -29,8 +29,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="10px"></RowDefinition>
             <RowDefinition Height="30px"></RowDefinition>
-            <RowDefinition Height="10px"></RowDefinition>
-            <RowDefinition Height="30px"></RowDefinition>
+            <RowDefinition Height="20px"></RowDefinition>
+            <RowDefinition Height="50px"></RowDefinition>
             <RowDefinition Height="50px"></RowDefinition>
             <RowDefinition Height="50px"></RowDefinition>
             <RowDefinition Height="50px"></RowDefinition>
@@ -48,19 +48,23 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" FontWeight="Bold" Foreground="#FF0F527A">Kalkulator zużycia prądu</TextBlock>
-        <Label Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A">Cena za kWh:</Label>
-        <Label Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A">Moc grzałki (W):</Label>
-        <Label Grid.Row="6" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A">Moc filtra (W):</Label>
+        <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A">Cena za kWh:</Label>
+        <Label Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A">Moc grzałki (W):</Label>
+        <Label Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A">Moc filtra (W):</Label>
+        <Label Grid.Row="6" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A">Moc żarówki (W):</Label>
 
-        <TextBox x:Name="PriceOfElectricityValue" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"></TextBox>
-        <TextBox x:Name="HeaterValue" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"></TextBox>
-        <TextBox x:Name="FilterValue" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"></TextBox>
-
-        <ComboBox x:Name="TypeValue" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="PriceOfElectricityValue" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"></TextBox>
+        <TextBox x:Name="HeaterValue" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"></TextBox>
+        <TextBox x:Name="FilterValue" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"></TextBox>
+        <TextBox x:Name="LightValue" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"></TextBox>
+        
+        <ComboBox x:Name="TypeValue" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="100" VerticalContentAlignment="Center"/>
+        <Label Grid.Row="4" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A">Przy pracy h/dzień:</Label>
+        <ComboBox x:Name="HeaterTimeValue" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="40" Margin="140,0,0,0" VerticalContentAlignment="Center"/>
         <Label Grid.Row="5" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A">Przy pracy h/dzień:</Label>
-        <ComboBox x:Name="HeaterTimeValue" Grid.Row="5" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="40" Margin="140,0,0,0" VerticalContentAlignment="Center"/>
+        <ComboBox x:Name="FilterTimeValue" Grid.Row="5" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="40" Margin="140,0,0,0" VerticalContentAlignment="Center"/>
         <Label Grid.Row="6" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A">Przy pracy h/dzień:</Label>
-        <ComboBox x:Name="FilterTimeValue" Grid.Row="6" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="40" Margin="140,0,0,0" VerticalContentAlignment="Center"/>
+        <ComboBox x:Name="LightTimeValue" Grid.Row="6" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="40" Margin="140,0,0,0" VerticalContentAlignment="Center"/>
 
         <Button x:Name="ResulPowerButton" Grid.Row="7" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="ResulPowerButton_Click" Grid.ColumnSpan="3" Margin="335,0,335,9.8">Oblicz</Button>
         <Label x:Name="ResultDay" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="#FF0F527A"></Label>
