@@ -60,6 +60,8 @@
             <Image Source="/Images/PanoramicButton.png" />
         </Button>
 
+        <TextBlock Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Foreground="#FF0F527A" TextWrapping="Wrap" FontWeight="Bold">Wszystkie wymiary należy podać w mm</TextBlock>
+        
         <Frame x:Name="AquariumVolumeShape" Grid.Row="3" Grid.RowSpan="4" Grid.Column="2" Width="600" Height="370" HorizontalAlignment="Left" VerticalAlignment="Top"></Frame>
         
     </Grid>
