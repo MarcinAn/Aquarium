@@ -88,12 +88,12 @@ namespace Aquarium
                 resultMonth = "";
                 resultYear = "";
             }
-            else if (typeValue == "zł")
-            {
-                priceOfElectricityValue = priceOfElectricityValue * 100;
-            }
             else
             {
+                if (typeValue == "zł")
+                {
+                    priceOfElectricityValue = priceOfElectricityValue * 100;
+                }
                 heaterResult = (float)Math.Round(((heaterValue * 0.001f) * heaterTimeValue), 2);
                 filterResult = (float)Math.Round(((filterValue * 0.001f) * filterTimeValue), 2);
                 lightResult = (float)Math.Round(((lightValue * 0.001f) * lightTimeValue), 2);
