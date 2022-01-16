@@ -27,7 +27,7 @@ namespace Aquarium
         public string resultYear;
         public float consumptioPerDaykWh;
         public float consumptioPerMonthkWh;
-        public float consumptioPerYearkWh; 
+        public float consumptioPerYearkWh;
         public List<string> types = new List<string>()
     {
         "zł",
@@ -82,7 +82,8 @@ namespace Aquarium
                 resultMonth = "";
                 resultYear = "";
             }
-            else if ((heaterValue != 0 && heaterTimeValue == 0) || (heaterValue == 0 && heaterTimeValue != 0) || (filterValue != 0 && filterTimeValue == 0) || (filterValue == 0 && filterTimeValue != 0) || (lightValue != 0 && lightTimeValue == 0) || (lightValue == 0 && lightTimeValue != 0))
+            else if ((heaterValue != 0 && heaterTimeValue == 0) || (heaterValue == 0 && heaterTimeValue != 0) || (filterValue != 0 && filterTimeValue == 0)
+                || (filterValue == 0 && filterTimeValue != 0) || (lightValue != 0 && lightTimeValue == 0) || (lightValue == 0 && lightTimeValue != 0))
             {
                 resultDay = "Wprowadzono błędne dane";
                 resultMonth = "";
