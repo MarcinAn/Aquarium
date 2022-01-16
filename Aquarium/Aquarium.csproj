@@ -215,6 +215,9 @@
     <Resource Include="Images\Background.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\Aquarium.ico" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Aquarium.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
